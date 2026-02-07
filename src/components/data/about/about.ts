@@ -1,10 +1,12 @@
+import profilePic from "../../../assets/about-page/ddc-profile-pic.jpg";
+
 export const artistStatement: string =
   "As a sculptor, I’m in a constant battle with gravity - how to make things stand up in the world. Birds feel like the most anti-gravity beings I know. I watch them closely, and for them to enter my lexicon of possibilities they have to exist both in lived reality and in the texts I return to again and again: illustrated field guides, Ladybird books of nature, the Brontë sisters, and Thomas Bewick’s end pieces - those small, independent, mysterious scenes that sit quietly at the end of a chapter.";
 
 export const bio: string =
   "Denise de Cordova is a sculptor and ceramicist living and working in London. She is a tutor at the Royal College of Art in London in the Sculpture department, where she has worked for 20+ years.";
 
-interface GroupExhibit {
+export interface GroupExhibit {
   id: number;
   year: number;
   title: string;
@@ -76,3 +78,5 @@ export const education: string[] = [
   "Royal College of Art, MA Sculpture",
   "University of Brighton, BA Sculpture",
 ];
+
+export const aboutPic = profilePic;
