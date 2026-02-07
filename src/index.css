@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"); */
+
+@layer components {
+  .h1-title {
+    @apply font-title text-[2.25rem] font-normal leading-normal text-ddc-text;
+  }
+
+  .h2-menu {
+    @apply font-title text-[1.5rem] font-light leading-normal text-ddc-text;
+  }
+
+  .h3-large-detail {
+    @apply font-title text-[1.5rem] font-light leading-normal text-ddc-text;
+  }
+
+  .h4-bold-header {
+    @apply font-title text-[1.5rem] font-normal leading-normal text-ddc-text;
+  }
+
+  .p-body {
+    @apply font-title text-[1.125rem] font-light leading-normal text-ddc-text;
+  }
+
+  .p-detail {
+    @apply font-detail text-[1.125rem] font-normal leading-normal text-ddc-text italic;
+  }
+
+  .p-detail-faded {
+    @apply font-detail text-[1rem] font-light leading-normal text-ddc-text;
+  }
+}
