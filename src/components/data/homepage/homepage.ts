@@ -15,7 +15,7 @@ interface HomePageHero {
 export const homepageHeroes: HomePageHero[] = [
   {
     id: 1,
-    title: "Rocks Remeber and Other Sotires",
+    title: "Rocks Remember and Other Stories",
     year: 2024,
     caption: "Installation View, Standpoint Gallery, London",
     image: rocksRememberAndOtherStoriesImg,

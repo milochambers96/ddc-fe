@@ -15,8 +15,8 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="flex justify-center">
-      <nav className="flex justify-between items-center w-full max-w-[81.25rem] px-8 py-6">
+    <section className="flex justify-center">
+      <nav className="flex justify-between items-center w-full max-w-[81.25rem]  mt-[6rem]">
         <div>
           <Link to={homeTitle.path}>
             <h1 className="h1-title">{homeTitle.text}</h1>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </header>
+    </section>
   );
 };
 
