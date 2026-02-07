@@ -30,7 +30,7 @@
     @apply font-detail text-[1.125rem] font-normal leading-normal text-ddc-accent italic;
   }
 
-  .h7-detail-faded {
-    @apply font-detail text-[1rem] font-light leading-normal text-ddc-text;
+  .h6-detail-faded {
+    @apply font-detail text-[1rem] font-light leading-normal text-ddc-faded;
   }
 }

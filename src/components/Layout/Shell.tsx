@@ -7,7 +7,7 @@ interface ShellProp {
 const Shell = ({ children }: ShellProp) => {
   return (
     <section className="bg-ddc-background">
-      <div className="mx-[0.274rem]">{children}</div>
+      <div className="mx-[4.5rem]">{children}</div>
     </section>
   );
 };

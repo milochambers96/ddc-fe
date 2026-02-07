@@ -24,8 +24,8 @@ export const homepageHeroes: HomePageHero[] = [
   {
     id: 2,
     title: "Deep Wood Woman",
-    year: 2024,
-    caption: "Bowen Island, Canada",
+    year: 2020,
+    caption: "Pemberton, BC, Canada",
     image: deepWoodWomanImg,
   },
 ];

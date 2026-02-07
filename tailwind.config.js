@@ -9,6 +9,7 @@ export default {
           text: "#111111",
           accent: "#4A3344",
           highlight: "#A01F7E",
+          faded: "#A09999;",
         },
       },
       fontFamily: {
