@@ -18,7 +18,9 @@ const Navbar = () => {
     <header className="flex justify-center">
       <nav className="flex justify-between items-center w-full max-w-[81.25rem] px-8 py-6">
         <div>
-          <h1 className="h1-title">{homeTitle.text}</h1>
+          <Link to={homeTitle.path}>
+            <h1 className="h1-title">{homeTitle.text}</h1>
+          </Link>
         </div>
         <div>
           <ul className="flex gap-x-[3rem]">

@@ -7,6 +7,7 @@ export default {
         ddc: {
           background: "#FAFAFA",
           text: "#111111",
+          accent: "#4A3344",
           highlight: "#A01F7E",
         },
       },

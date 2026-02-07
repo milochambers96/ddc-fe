@@ -22,15 +22,15 @@
     @apply font-title text-[1.5rem] font-normal leading-normal text-ddc-text;
   }
 
-  .p-body {
+  .h5-body {
     @apply font-title text-[1.125rem] font-light leading-normal text-ddc-text;
   }
 
-  .p-detail {
-    @apply font-detail text-[1.125rem] font-normal leading-normal text-ddc-text italic;
+  .h6-detail {
+    @apply font-detail text-[1.125rem] font-normal leading-normal text-ddc-accent italic;
   }
 
-  .p-detail-faded {
+  .h7-detail-faded {
     @apply font-detail text-[1rem] font-light leading-normal text-ddc-text;
   }
 }
