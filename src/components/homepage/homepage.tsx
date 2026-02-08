@@ -2,11 +2,11 @@ import { homepageHeroes } from "../data/homepage/homepage";
 
 const Homepage = () => {
   return (
-    <main className="mt-[3rem]">
-      <section className="flex justify-center gap-x-9 items-start">
+    <main className="mt-[3rem] px-4">
+      <section className="flex flex-col md:flex-row justify-center gap-6 md:gap-x-9 items-start max-w-[81.25rem] mx-auto">
         {/* Rocks Remember and Other Stories */}
-        <article className="flex flex-col gap-y-6 w-[750px]">
-          <div className="h-[503px]">
+        <article className="flex flex-col gap-y-6 w-full md:w-[750px]">
+          <div className="w-full h-auto md:h-[503px]">
             <img
               src={homepageHeroes[0].image}
               alt={`An image of ${homepageHeroes[0].title} from ${homepageHeroes[0].year}`}
@@ -22,8 +22,8 @@ const Homepage = () => {
         </article>
 
         {/* Deep Wood Woman */}
-        <article className="flex flex-col gap-y-6 w-[514px]">
-          <div className="h-[503px]">
+        <article className="flex flex-col gap-y-6 w-full md:w-[514px]">
+          <div className="w-full h-auto md:h-[503px]">
             <img
               src={homepageHeroes[1].image}
               alt={`An image of ${homepageHeroes[1].title} from ${homepageHeroes[1].year}`}

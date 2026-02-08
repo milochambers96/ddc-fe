@@ -72,7 +72,7 @@ const About = () => {
           <article>
             <h4 className="h4-bold-header">
               Full CV can be found{" "}
-              <a href="" className="hover:text-ddc-highlight transition-colors">
+              <a href="" className="text-ddc-highlight underline">
                 here
               </a>
               .{" "}
@@ -81,10 +81,7 @@ const About = () => {
           <article>
             <h4 className="h4-bold-header">
               For all enquiries, please contact me using the form{" "}
-              <Link
-                to="/contact"
-                className="hover:text-ddc-highlight transition-colors"
-              >
+              <Link to="/contact" className="text-ddc-highlight underline">
                 here
               </Link>
               .
