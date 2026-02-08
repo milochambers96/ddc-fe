@@ -9,10 +9,12 @@ import {
   aboutPic,
 } from "../data/about/about";
 
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <main className="mt-[3rem]">
-      <div className="flex justify-center gap-x-9 items-start">
+      <div className="flex justify-center gap-x-9 items-start max-w-[81.25rem] mx-auto">
         <section className="flex flex-col gap-y-16">
           <article>
             <h4 className="h4-bold-header mb-2">Artist Statement</h4>
@@ -33,7 +35,7 @@ const About = () => {
               ))}
             </ul>
           </article>
-          <article>
+          <article className="text-justify">
             <h4 className="h4-bold-header mb-2">
               Selected Public Speaking & Interviews
             </h4>
@@ -45,7 +47,7 @@ const About = () => {
               ))}
             </ul>
           </article>
-          <article>
+          <article className="text-justify">
             <h4 className="h4-bold-header mb-2">
               Selected Awards & Scholarships
             </h4>
@@ -66,6 +68,27 @@ const About = () => {
                 </li>
               ))}
             </ul>
+          </article>
+          <article>
+            <h4 className="h4-bold-header">
+              Full CV can be found{" "}
+              <a href="" className="hover:text-ddc-highlight transition-colors">
+                here
+              </a>
+              .{" "}
+            </h4>
+          </article>
+          <article>
+            <h4 className="h4-bold-header">
+              For all enquiries, please contact me using the form{" "}
+              <Link
+                to="/contact"
+                className="hover:text-ddc-highlight transition-colors"
+              >
+                here
+              </Link>
+              .
+            </h4>
           </article>
         </section>
         <section className="flex-shrink-0">
