@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="flex justify-center px-4 sticky top-0 bg-ddc-background z-50">
+    <section className="flex justify-center md:px-4 sticky top-0 bg-ddc-background z-50">
       <nav className="flex justify-between items-center w-full max-w-[81.25rem] mt-[6rem]">
         {/* Logo/Title */}
         <div>
@@ -82,7 +82,7 @@ const Navbar = () => {
             }
           `}
         >
-          <ul className="flex flex-col p-4 space-y-4">
+          <ul className="flex flex-col py-4 space-y-4">
             {navbarItems.map((item) => (
               <li key={item.text}>
                 <Link
