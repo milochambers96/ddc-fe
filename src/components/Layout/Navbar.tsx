@@ -23,8 +23,8 @@ const Navbar = () => {
   };
 
   return (
-    <section className="flex justify-center md:px-4 sticky bg-ddc-background top-0 z-50">
-      <nav className="flex justify-between items-center w-full max-w-[81.25rem] mt-[6rem]">
+    <section className="flex justify-center sticky bg-ddc-background top-0 z-50">
+      <nav className="flex justify-between items-center w-full max-w-[81.25rem] lg:max-w-[81.50rem] mt-[6rem]">
         {/* Logo/Title */}
         <div>
           <Link to={homeTitle.path}>
