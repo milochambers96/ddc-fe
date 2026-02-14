@@ -11,6 +11,7 @@ export default {
           highlight: "#A01F7E",
           faded: "#A09999;",
           black: "#000",
+          button: "#EFEFEF",
         },
       },
       fontFamily: {

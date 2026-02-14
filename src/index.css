@@ -34,6 +34,10 @@
     @apply font-detail text-[1rem] font-light leading-normal text-ddc-faded;
   }
 
+  .d-button {
+    @apply font-title text-[1.5rem] font-light leading-normal text-ddc-button;
+  }
+
   .p1-title {
     @apply font-title text-[1.25rem] font-normal leading-normal text-ddc-text;
   }
@@ -60,5 +64,9 @@
 
   .p7-detail-faded {
     @apply font-detail text-[0.625rem] font-light leading-normal text-ddc-faded;
+  }
+
+  .p-button {
+    @apply font-title text-[0.875rem] font-light leading-normal text-ddc-button;
   }
 }

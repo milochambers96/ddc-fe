@@ -37,62 +37,62 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-y-6">
-      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500 max-w-[40rem]">
+      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500">
         <input
           type="text"
           id="name"
           name="name"
           placeholder="Name"
           required
-          className="w-full py-1 bg-ddc-background h3-large-detail placeholder:text-[#A09999] outline-none"
+          className="w-full py-1 bg-ddc-background p3-large-detail md:d3-large-detail placeholder:text-[#A09999] outline-none"
         />
       </div>
 
-      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500 max-w-[40rem]">
+      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500">
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Email"
           required
-          className="w-full py-1 bg-ddc-background h3-large-detail placeholder:text-[#A09999] outline-none"
+          className="w-full py-1 bg-ddc-background p3-large-detail md:d3-large-detail placeholder:text-[#A09999] outline-none"
         />
       </div>
 
-      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500 max-w-[40rem]">
+      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500">
         <input
           type="text"
           id="subject"
           name="subject"
           placeholder="Subject"
           required
-          className="w-full py-1 bg-ddc-background h3-large-detail placeholder:text-[#A09999] outline-none"
+          className="w-full py-1 bg-ddc-background p3-large-detail md:d3-large-detail placeholder:text-[#A09999] outline-none"
         />
       </div>
 
-      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500 max-w-[40rem]">
+      <div className="border-b border-ddc-black has-[:user-invalid]:border-red-500">
         <textarea
           id="message"
           name="message"
           placeholder="Please write your message here"
           required
           rows={6}
-          className="w-full py-1 bg-ddc-background h3-large-detail placeholder:text-[#A09999] outline-none resize-none"
+          className="w-full py-1 bg-ddc-background p3-large-detail md:d3-large-detail placeholder:text-[#A09999] outline-none resize-none"
         />
       </div>
 
-      <div className="flex justify-end mt-[4.06rem]">
+      <div className="flex justify-end  mt-[4rem]">
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-[50%] py-3 px-6 bg-ddc-black text-[#EFEFEF] hover:bg-ddc-highlight transition-colors disabled:opacity-50 h3-large-detail"
+          className="w-full md:w-[50%] py-3 px-6 bg-ddc-black text-[#EFEFEF] hover:bg-ddc-highlight transition-colors disabled:opacity-50 p-button md:d-button"
         >
           {isSubmitting ? "Sending..." : "Submit"}
         </button>
       </div>
 
       {error && (
-        <div className="p-4 bg-red-100 text-red-700 rounded h5-body">
+        <div className="p-4 bg-red-100 text-red-700 rounded md:d5-body p5-body">
           {error}
         </div>
       )}

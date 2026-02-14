@@ -11,12 +11,12 @@ const ContactShell = () => {
     "For any enquiries on available pieces, upcoming shows, speaking requests, and more - please fill out the contact form.";
 
   return (
-    <main className="mt-[6rem]">
+    <main className="mt-[4rem] md:mt-[6rem]">
       {!isSuccess && (
-        <div className="flex justify-center gap-x-[8rem] items-start max-w-[81.25rem] mx-auto">
-          <section className="flex flex-col gap-y-4 flex-1 text-justify">
-            <h4 className="h4-bold-header">{formIntro}</h4>
-            <h4 className="h4-bold-header">
+        <div className="flex flex-col md:flex-row justify-center gap-y-8 gap-x-[8rem] md:items-start max-w-[81.25rem] mx-auto">
+          <section className="flex flex-col gap-y-4 flex-1 text-justify p4-bold-header md:d4-bold-header">
+            <p>{formIntro}</p>
+            <p>
               I am also on Instagram, where you can follow me{" "}
               <a
                 href="https://www.instagram.com/denisedecordova1/?hl=en"
@@ -27,11 +27,11 @@ const ContactShell = () => {
                 here
               </a>
               .
-            </h4>
+            </p>
           </section>
-          <section className="flex-shrink-0 w-[40rem]">
+          <section className="w-full md:w-[40rem] md:flex-shrink-0">
             <ContactForm onSuccess={() => setIsSuccess(true)} />
-          </section>{" "}
+          </section>
         </div>
       )}
       {isSuccess && (
