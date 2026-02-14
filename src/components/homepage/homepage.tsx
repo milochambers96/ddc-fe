@@ -3,9 +3,9 @@ import { homepageHeroes } from "../data/homepage/homepage";
 const Homepage = () => {
   return (
     <main className="md:mt-[3rem] mt-[4rem]">
-      <section className="flex flex-col md:flex-row justify-center gap-6 md:gap-x-9 items-start max-w-[81.25rem] mx-auto">
+      <section className="flex flex-col md:flex-row justify-center gap-8 md:gap-x-9 items-start max-w-[81.25rem] mx-auto">
         {/* Rocks Remember and Other Stories */}
-        <article className="flex flex-col gap-y-6 w-full md:w-[750px]">
+        <article className="flex flex-col md:gap-y-6 gap-y-4 w-full md:w-[750px]">
           <div className="w-full h-auto md:h-[503px]">
             <img
               src={homepageHeroes[0].image}
@@ -13,16 +13,18 @@ const Homepage = () => {
               className="w-full h-full object-cover block"
             />
           </div>
-          <div className="flex flex-col gap-y-2">
-            <h3 className="h3-large-detail">
+          <div className="flex flex-col md:gap-y-2 space-y-1">
+            <h3 className="md:d3-large-detail p3-large-detail">
               {homepageHeroes[0].title}, {homepageHeroes[0].year}
             </h3>
-            <h6 className="h6-detail">{homepageHeroes[0].caption}</h6>
+            <h6 className="md:d6-detail p6-detail">
+              {homepageHeroes[0].caption}
+            </h6>
           </div>
         </article>
 
         {/* Deep Wood Woman */}
-        <article className="flex flex-col gap-y-6 w-full md:w-[514px]">
+        <article className="flex flex-col md:gap-y-6 gap-y-4 w-full md:w-[514px]">
           <div className="w-full h-auto md:h-[503px]">
             <img
               src={homepageHeroes[1].image}
@@ -30,11 +32,13 @@ const Homepage = () => {
               className="w-full h-full object-cover block"
             />
           </div>
-          <div className="flex flex-col gap-y-2">
-            <h3 className="h3-large-detail">
+          <div className="flex flex-col md:gap-y-2 space-y-1">
+            <h3 className="md:d3-large-detail p3-large-detail">
               {homepageHeroes[1].title}, {homepageHeroes[1].year}
             </h3>
-            <h6 className="h6-detail">{homepageHeroes[1].caption}</h6>
+            <h6 className="md:d6-detail p6-detail">
+              {homepageHeroes[1].caption}
+            </h6>
           </div>
         </article>
       </section>

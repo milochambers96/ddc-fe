@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="flex justify-center md:px-4 sticky top-0 bg-ddc-background z-50">
+    <section className="flex justify-center md:px-4 sticky bg-ddc-background top-0 z-50">
       <nav className="flex justify-between items-center w-full max-w-[81.25rem] mt-[6rem]">
         {/* Logo/Title */}
         <div>
