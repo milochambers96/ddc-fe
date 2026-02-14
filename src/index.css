@@ -6,31 +6,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"); */
 
 @layer components {
-  .h1-title {
+  .d1-title {
     @apply font-title text-[2.25rem] font-normal leading-normal text-ddc-text;
   }
 
-  .h2-menu {
+  .d2-menu {
     @apply font-title text-[1.5rem] font-light leading-normal text-ddc-text;
   }
 
-  .h3-large-detail {
+  .d3-large-detail {
     @apply font-title text-[1.5rem] font-light leading-normal text-ddc-text;
   }
 
-  .h4-bold-header {
+  .d4-bold-header {
     @apply font-title text-[1.5rem] font-normal leading-normal text-ddc-text;
   }
 
-  .h5-body {
+  .d5-body {
     @apply font-title text-[1.125rem] font-light leading-normal text-ddc-text;
   }
 
-  .h6-detail {
+  .d6-detail {
     @apply font-detail text-[1.125rem] font-normal leading-normal text-ddc-accent italic;
   }
 
-  .h6-detail-faded {
+  .d7-detail-faded {
     @apply font-detail text-[1rem] font-light leading-normal text-ddc-faded;
+  }
+
+  .p1-title {
+    @apply font-title text-[1.25rem] font-normal leading-normal text-ddc-text;
+  }
+
+  .p2-menu {
+    @apply font-title text-[1rem] font-light leading-normal text-ddc-text;
+  }
+
+  .p3-large-detail {
+    @apply font-title text-[0.875rem] font-light leading-normal text-ddc-text;
+  }
+
+  .p4-bold-header {
+    @apply font-title text-[1.125rem] font-normal leading-normal text-ddc-text;
+  }
+
+  .p5-body {
+    @apply font-title text-[1rem] font-light leading-normal text-ddc-text;
+  }
+
+  .p6-detail {
+    @apply font-detail text-[0.875rem] font-normal leading-normal text-ddc-accent italic;
+  }
+
+  .p7-detail-faded {
+    @apply font-detail text-[0.625rem] font-light leading-normal text-ddc-faded;
   }
 }

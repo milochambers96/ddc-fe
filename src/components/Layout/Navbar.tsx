@@ -23,12 +23,12 @@ const Navbar = () => {
   };
 
   return (
-    <section className="flex justify-center px-4">
+    <section className="flex justify-center px-4 sticky top-0 bg-ddc-background z-50">
       <nav className="flex justify-between items-center w-full max-w-[81.25rem] mt-[6rem]">
         {/* Logo/Title */}
         <div>
           <Link to={homeTitle.path}>
-            <h1 className="h1-title">{homeTitle.text}</h1>
+            <h1 className="md:d1-title p1-title">{homeTitle.text}</h1>
           </Link>
         </div>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
             {navbarItems.map((item) => (
               <li key={item.text}>
                 <Link to={item.path}>
-                  <h2 className="h2-menu hover:text-ddc-highlight transition-colors">
+                  <h2 className="d2-menu hover:text-ddc-highlight transition-colors">
                     {item.text}
                   </h2>
                 </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleBurger}
-            className="p-2 focus:outline-none"
+            className="focus:outline-none"
             aria-label="toggle menu"
           >
             {isActive ? (
@@ -66,12 +66,11 @@ const Navbar = () => {
         <div
           className={`
             md:hidden
-            fixed
-            top-[10rem]
+            absolute
+            top-full
             left-0
             right-0
-            bg-ddc-background
-            border-t border-ddc-text/20
+            bg-ddc-background/90
             transform
             transition-all
             duration-300
@@ -83,12 +82,12 @@ const Navbar = () => {
             }
           `}
         >
-          <ul className="flex flex-col py-6 px-8 space-y-6">
+          <ul className="flex flex-col p-4 space-y-4">
             {navbarItems.map((item) => (
               <li key={item.text}>
                 <Link
                   to={item.path}
-                  className="h2-menu hover:text-ddc-highlight transition-colors block"
+                  className="p2-menu hover:text-ddc-highlight transition-colors block"
                   onClick={toggleBurger}
                 >
                   {item.text}
