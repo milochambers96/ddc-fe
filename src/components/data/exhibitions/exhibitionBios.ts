@@ -1,0 +1,11 @@
+export const confluencesBio =
+  "The Deep Wood Women and Women Who Have Incidents With Animals installed in the Ballroom of The Argentine Ambassador’s Official Residence  as part of London Craft Week 2021";
+
+export const deepWoodBio =
+  "This series of sculptures are the result of repeated research trips to the forest spaces of British Colombia, where I fell into love with the damp, mossy landscape that reminded me of my own moisture laden body. The work centres on the female figure as a vessel for ideas, symbols, and ancient echoes—figures who exist both within and beyond the visible world – the terra mater goddesses, the maenads and deep wood women of our imagination; my companions on solitary walks in wild places.";
+
+export const rocksRememberBio =
+  "The exhibition was based on a project carried out during a residency at the British School at Rome British School at Rome in 2019 summer residency researching the goddess Cibele (who came to earth in the form of a meteorite and had a dual role both as goddess of nature’s chaos and civilisation’s order). She is also associated with origin mythologies that chime with scientific research that proposes that life originated on Earth from microbe carrying meteorites. The theme of meteorites was prominent in the exhibition, acting as symbols of prophecy, omens, and wonder. In Greek mythology, meteorites are associated with a sense of weightlessness, or the idea of being suspended between heaven and earth, in a state of in-betweeness - neither fully grounded in reality nor entirely abstract as a kind of 'real unreal'. The intention was to create a series of works that embodied a form of suspension between primal, instinctual forces and the more structured aspects of human identity and culture; a seeking of a wildness that exists in the everyday, in the city, the forest, or the mind.";
+
+export const treeWilderBio =
+  "TreeWilder was an exhibition of site-responsive interventions set in Barnwell Country Park. Suggestive of both the words 'bewilder' and 'rewilding', TreeWilder was an invitation to address the theme of  Xylophobia (or fear of the woods). The ‘Winter Watcher’ was sited in a tree that became more visible as leaves were shed throughout the winter months,  and ‘The Birds’ were located in the Rangers Hut Education Room, as a gesture towards ‘The Ladybird Books of Nature’.";
