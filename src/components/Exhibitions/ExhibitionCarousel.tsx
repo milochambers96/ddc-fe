@@ -81,7 +81,7 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
                   />
                 </div>
                 <div className="space-y-[0.63rem]">
-                  <h3 className="p3-large-detail md:d3-large-detail">
+                  <h3 className="p3-large-detail md:d3-large-detail min-h-[72px]">
                     {exhibition.title}
                   </h3>
                   <p className="p6-detail md:d6-detail">
