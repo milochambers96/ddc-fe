@@ -18,6 +18,7 @@ export interface Exhibition {
   location: string;
   bio: string;
   image: string;
+  imageFocus?: string;
 }
 
 export const exhibitionsData: Exhibition[] = [
@@ -27,8 +28,8 @@ export const exhibitionsData: Exhibition[] = [
     gallery: "Argentine Ambassador’s Residence",
     location: "London",
     year: 2021,
-    image: conflunceCover,
     bio: confluencesBio,
+    image: conflunceCover,
   },
 
   {
@@ -37,8 +38,8 @@ export const exhibitionsData: Exhibition[] = [
     gallery: "Standpoint Gallery",
     location: "London",
     year: 2019,
-    image: deepWoodCover,
     bio: deepWoodBio,
+    image: deepWoodCover,
   },
 
   {
@@ -47,8 +48,8 @@ export const exhibitionsData: Exhibition[] = [
     gallery: "Standpoint Gallery",
     location: "London",
     year: 2024,
-    image: rocksCover,
     bio: rocksRememberBio,
+    image: rocksCover,
   },
 
   {
@@ -57,7 +58,8 @@ export const exhibitionsData: Exhibition[] = [
     gallery: "Barnwell Country Park",
     location: "Northamptonshire",
     year: 2022,
-    image: treeCover,
     bio: treeWilderBio,
+    image: treeCover,
+    imageFocus: "object-[71.5%_28.5%]",
   },
 ];

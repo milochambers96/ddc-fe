@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import { flushSync } from "react-dom";
+
 import useEmblaCarousel from "embla-carousel-react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
@@ -43,13 +45,23 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
 
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
+
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+
+    flushSync(() => {
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+    });
+
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative">
+    <div className="space-y-6 xl:space-y-14">
       {/* Carousel container */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex gap-x-4 md:gap-x-10">
@@ -59,15 +71,15 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
               className="flex-[0_0_100%] md:flex-[0_0_calc(33.333%-1rem)] min-w-0 space-y-8"
             >
               <div className="space-y-3">
-                {/* Image */}
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={exhibition.image}
                     alt={exhibition.title}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${
+                      exhibition.imageFocus ?? "object-center"
+                    }`}
                   />
                 </div>
-                {/* Info */}
                 <div className="space-y-[0.63rem]">
                   <h3 className="p3-large-detail md:d3-large-detail">
                     {exhibition.title}
@@ -82,26 +94,25 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
         </div>
       </div>
 
-      {/* Navigation arrows - only show on desktop when scrollable */}
-      {canScrollPrev && (
+      {/* Navigation arrows - below carousel */}
+      <div className="hidden md:flex items-center justify-between gap-4">
         <button
           onClick={scrollPrev}
-          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 w-10 h-10 items-center justify-center bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+          disabled={!canScrollPrev}
+          className="w-10 h-10 flex items-center justify-center rounded-full border border-ddc-text disabled:opacity-30 hover:bg-gray-50 transition-colors"
           aria-label="Previous slide"
         >
           <HiChevronLeft size={24} className="text-ddc-text" />
         </button>
-      )}
-
-      {canScrollNext && (
         <button
           onClick={scrollNext}
-          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 w-10 h-10 items-center justify-center bg-white rounded-full shadow-lg hover:bg-ddc-highlight hover:text-ddc-accent transition-colors"
+          disabled={!canScrollNext}
+          className="w-10 h-10 flex items-center justify-center rounded-full border border-ddc-text disabled:opacity-30 hover:bg-ddc-highlight hover:text-ddc-accent transition-colors"
           aria-label="Next slide"
         >
           <HiChevronRight size={24} className="text-ddc-text" />
         </button>
-      )}
+      </div>
     </div>
   );
 };

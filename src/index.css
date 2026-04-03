@@ -70,3 +70,7 @@
     @apply font-title text-[0.875rem] font-light leading-normal text-ddc-button;
   }
 }
+
+body {
+  background-color: #fafafa; /* or just the hex value directly */
+}
