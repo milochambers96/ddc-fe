@@ -1,11 +1,8 @@
-import { useRef, useState } from "react";
+import {useState } from "react";
 import ContactForm from "./ContactForm";
 
 const ContactShell = () => {
-  const form = useRef<HTMLFormElement>(null);
-  //   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  //   const [error, setError] = useState("");
 
   const formIntro: string =
     "For any enquiries on available pieces, upcoming shows, speaking requests, and more - please fill out the contact form.";
