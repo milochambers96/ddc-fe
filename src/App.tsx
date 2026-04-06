@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/exhibitions" element={<Exhibitions />} />
-            <Route path="/exhibition/:id" element={<ExhibitionItemShell />} />
+            <Route path="/exhibitions/:id" element={<ExhibitionItemShell />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactShell />} />
