@@ -3,12 +3,20 @@ import deepWoodCover from "../../../assets/exhibition-page/deepwood-cover.jpeg";
 import rocksCover from "../../../assets/exhibition-page/rocks-remember-cover.jpg";
 import treeCover from "../../../assets/exhibition-page/treewilder-cover.jpg";
 
+import { congregationImages, dwwImages } from "./exhibitionPhotos";
+
 import {
   confluencesBio,
   deepWoodBio,
   rocksRememberBio,
   treeWilderBio,
 } from "./exhibitionBios";
+
+export interface ExhibitionPhoto {
+  src: string;
+  width: number;
+  height: number;
+}
 
 export interface Exhibition {
   id: number;
@@ -19,6 +27,8 @@ export interface Exhibition {
   bio: string;
   image: string;
   imageFocus?: string;
+  exhibitionPhotos?: ExhibitionPhoto[];
+  mosaicLayout?: "columns" | "rows" | "masonry";
 }
 
 export const exhibitionsData: Exhibition[] = [
@@ -30,6 +40,8 @@ export const exhibitionsData: Exhibition[] = [
     year: 2021,
     bio: confluencesBio,
     image: conflunceCover,
+    exhibitionPhotos: congregationImages,
+    mosaicLayout: "columns",
   },
 
   {
@@ -40,6 +52,8 @@ export const exhibitionsData: Exhibition[] = [
     year: 2019,
     bio: deepWoodBio,
     image: deepWoodCover,
+    exhibitionPhotos: dwwImages,
+    mosaicLayout: "rows",
   },
 
   {

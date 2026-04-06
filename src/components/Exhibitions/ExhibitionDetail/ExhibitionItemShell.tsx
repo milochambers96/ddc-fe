@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
-import {
-  exhibitionsData,
-  Exhibition,
-} from "../../data/exhibitions/exhibitions";
+import { exhibitionsData } from "../../data/exhibitions/exhibitions";
+import ImageMosaic from "./ImageMosaic";
 
 const ExhibitionItemShell = () => {
   const { id } = useParams();
@@ -12,14 +10,20 @@ const ExhibitionItemShell = () => {
     exhibitionsData.find((exhibition) => exhibition.id === exhIdNum) ?? null;
 
   return (
-    <section className="flex justify-center mt-[4rem] md:mt-[6rem]">
+    <section className="mt-[4rem] md:mt-[6rem] max-w-[81.25rem] mx-auto space-y-10">
       {/* Exh Info */}
-      <div className="w-full max-w-[81.25rem] lg:max-w-[81.50rem] text-justify space-y-6">
-        <h1 className="p1-title md:d1-title">{exhItem?.title}</h1>
-        <h2 className="p3-large-detail md:d3-large-detail">{exhItem?.bio}</h2>
+      <div className="text-justify space-y-6">
+        <h1 className="p1-exh md:d1-exh">{exhItem?.title}</h1>
+        <h3 className="p3-large-detail md:d3-large-detail">{exhItem?.bio}</h3>
       </div>
 
-      {/*  Exh Images*/}
+      {/* Exh Images */}
+      <div className="w-full">
+        <ImageMosaic
+          photos={exhItem?.exhibitionPhotos ?? []}
+          layout={exhItem?.mosaicLayout}
+        />
+      </div>
     </section>
   );
 };
