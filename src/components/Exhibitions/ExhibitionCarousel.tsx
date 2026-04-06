@@ -7,14 +7,6 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { Exhibition } from "../data/exhibitions/exhibitions";
 
-// interface Exhibition {
-//   id: string;
-//   title: string;
-//   location: string;
-//   year: string;
-//   image: string;
-// }
-
 interface ExhibitionsCarouselProps {
   exhibitions: Exhibition[];
 }
@@ -83,10 +75,10 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
                     />
                   </div>
                   <div className="space-y-[0.63rem]">
-                    <h3 className="p3-large-detail md:d3-large-detail min-h-[72px] group-hover:text-ddc-highlight transition-colors">
+                    <h3 className="d3-large-detail min-h-[72px] group-hover:text-ddc-highlight transition-colors">
                       {exhibition.title}
                     </h3>
-                    <p className="p6-detail md:d6-detail group-hover:text-ddc-highlight transition-colors">
+                    <p className="d6-detail group-hover:text-ddc-highlight transition-colors">
                       {exhibition.gallery}, {exhibition.location}
                     </p>
                   </div>
