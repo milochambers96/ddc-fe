@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { flushSync } from "react-dom";
+import { Link } from "react-router-dom";
 
 import useEmblaCarousel from "embla-carousel-react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
@@ -70,25 +71,27 @@ const ExhibitionsCarousel = ({ exhibitions }: ExhibitionsCarouselProps) => {
               key={exhibition.id}
               className="flex-[0_0_100%] md:flex-[0_0_calc(33.333%-1rem)] min-w-0 space-y-8"
             >
-              <div className="space-y-3">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={exhibition.image}
-                    alt={exhibition.title}
-                    className={`w-full h-full object-cover ${
-                      exhibition.imageFocus ?? "object-center"
-                    }`}
-                  />
+              <Link to={`/exhibitions/${exhibition.id}`} className="group">
+                <div className="space-y-3">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={exhibition.image}
+                      alt={exhibition.title}
+                      className={`w-full h-full object-cover ${
+                        exhibition.imageFocus ?? "object-center"
+                      }`}
+                    />
+                  </div>
+                  <div className="space-y-[0.63rem]">
+                    <h3 className="p3-large-detail md:d3-large-detail min-h-[72px] group-hover:text-ddc-highlight transition-colors">
+                      {exhibition.title}
+                    </h3>
+                    <p className="p6-detail md:d6-detail group-hover:text-ddc-highlight transition-colors">
+                      {exhibition.gallery}, {exhibition.location}
+                    </p>
+                  </div>
                 </div>
-                <div className="space-y-[0.63rem]">
-                  <h3 className="p3-large-detail md:d3-large-detail min-h-[72px]">
-                    {exhibition.title}
-                  </h3>
-                  <p className="p6-detail md:d6-detail">
-                    {exhibition.gallery}, {exhibition.location}
-                  </p>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

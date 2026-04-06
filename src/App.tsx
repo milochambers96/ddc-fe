@@ -5,6 +5,7 @@ import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import Exhibitions from "./components/Exhibitions/Exhibitions";
+import ExhibitionItemShell from "./components/Exhibitions/ExhibitionDetail/ExhibitionItemShell";
 import About from "./components/About/About";
 import ContactShell from "./components/Contact/ContactShell";
 
@@ -17,6 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/exhibitions" element={<Exhibitions />} />
+            <Route path="/exhibition/:id" element={<ExhibitionItemShell />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactShell />} />
           </Routes>
