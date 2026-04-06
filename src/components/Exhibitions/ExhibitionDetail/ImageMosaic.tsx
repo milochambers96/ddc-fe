@@ -11,15 +11,24 @@ import { ExhibitionPhoto } from "../../data/exhibitions/exhibitions";
 interface ImageMosaicProps {
   photos: ExhibitionPhoto[];
   layout?: "columns" | "rows" | "masonry";
+  rowHeight?: number;
 }
 
-const ImageMosaic = ({ photos, layout = "columns" }: ImageMosaicProps) => {
+const ImageMosaic = ({
+  photos,
+  layout = "columns",
+  rowHeight = 600,
+}: ImageMosaicProps) => {
   if (photos.length === 0) return null;
 
   return (
     <article>
       {layout === "rows" && (
-        <RowsPhotoAlbum photos={photos} targetRowHeight={600} spacing={32} />
+        <RowsPhotoAlbum
+          photos={photos}
+          targetRowHeight={rowHeight}
+          spacing={32}
+        />
       )}
       {layout === "masonry" && (
         <MasonryPhotoAlbum photos={photos} columns={2} spacing={32} />

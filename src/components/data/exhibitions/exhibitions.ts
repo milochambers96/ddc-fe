@@ -1,15 +1,23 @@
-import conflunceCover from "../../../assets/exhibition-page/congregation-cover.jpg";
+import conflunceCover from "../../../assets/exhibition-page/confluence-cover.jpg";
 import deepWoodCover from "../../../assets/exhibition-page/deepwood-cover.jpeg";
 import rocksCover from "../../../assets/exhibition-page/rocks-remember-cover.jpg";
 import treeCover from "../../../assets/exhibition-page/treewilder-cover.jpg";
+import congregationCover from "../../../assets/exhibition-page/congregation-cover.jpg";
 
-import { congregationImages, dwwImages } from "./exhibitionPhotos";
+import {
+  confluenceImages,
+  dwwImages,
+  rocksImages,
+  treesImages,
+  congImages,
+} from "./exhibitionPhotos";
 
 import {
   confluencesBio,
   deepWoodBio,
   rocksRememberBio,
   treeWilderBio,
+  congregationBio,
 } from "./exhibitionBios";
 
 export interface ExhibitionPhoto {
@@ -29,6 +37,7 @@ export interface Exhibition {
   imageFocus?: string;
   exhibitionPhotos?: ExhibitionPhoto[];
   mosaicLayout?: "columns" | "rows" | "masonry";
+  rowHeight?: number;
 }
 
 export const exhibitionsData: Exhibition[] = [
@@ -40,7 +49,7 @@ export const exhibitionsData: Exhibition[] = [
     year: 2021,
     bio: confluencesBio,
     image: conflunceCover,
-    exhibitionPhotos: congregationImages,
+    exhibitionPhotos: confluenceImages,
     mosaicLayout: "columns",
   },
 
@@ -54,6 +63,7 @@ export const exhibitionsData: Exhibition[] = [
     image: deepWoodCover,
     exhibitionPhotos: dwwImages,
     mosaicLayout: "rows",
+    rowHeight: 600,
   },
 
   {
@@ -64,6 +74,9 @@ export const exhibitionsData: Exhibition[] = [
     year: 2024,
     bio: rocksRememberBio,
     image: rocksCover,
+    exhibitionPhotos: rocksImages,
+    mosaicLayout: "rows",
+    rowHeight: 600,
   },
 
   {
@@ -75,5 +88,21 @@ export const exhibitionsData: Exhibition[] = [
     bio: treeWilderBio,
     image: treeCover,
     imageFocus: "object-[71.5%_28.5%]",
+    exhibitionPhotos: treesImages,
+    mosaicLayout: "rows",
+    rowHeight: 600,
+  },
+
+  {
+    id: 5,
+    title: "Congregation",
+    gallery: "The Chapel, Jesus College",
+    location: "Cambridge",
+    year: 2013,
+    bio: congregationBio,
+    image: congregationCover,
+    exhibitionPhotos: congImages,
+    mosaicLayout: "rows",
+    rowHeight: 650,
   },
 ];

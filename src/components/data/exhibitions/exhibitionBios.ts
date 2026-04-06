@@ -9,3 +9,6 @@ export const rocksRememberBio =
 
 export const treeWilderBio =
   "TreeWilder was an exhibition of site-responsive interventions set in Barnwell Country Park. Suggestive of both the words 'bewilder' and 'rewilding', TreeWilder was an invitation to address the theme of  Xylophobia (or fear of the woods). The ‘Winter Watcher’ was sited in a tree that became more visible as leaves were shed throughout the winter months,  and ‘The Birds’ were located in the Rangers Hut Education Room, as a gesture towards ‘The Ladybird Books of Nature’.";
+
+export const congregationBio =
+  "An installation of ceramics made under the nome de plume Amy Bird responding to the stained glass windows designed by Edward Burne Jones in the 12th century chapel dedicated to saint Radegund. Each ‘character’ is made in response to the artist's literary and historic heroines - vessels of contemplation drawing upon craft and fine art traditions.";

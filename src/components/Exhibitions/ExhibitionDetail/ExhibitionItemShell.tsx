@@ -22,6 +22,7 @@ const ExhibitionItemShell = () => {
         <ImageMosaic
           photos={exhItem?.exhibitionPhotos ?? []}
           layout={exhItem?.mosaicLayout}
+          rowHeight={exhItem?.rowHeight}
         />
       </div>
     </section>
